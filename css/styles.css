@@ -423,6 +423,8 @@ transition: background-color var(--transition-duration-function);
 
 .footer {
     display: flex;
+    justify-content: space-between;
+    
 }
 .footer-description {
     width: 264px;
@@ -433,9 +435,15 @@ transition: background-color var(--transition-duration-function);
     line-height: 1.5; 
 }
 .social-media {
-    margin-left: 120px;
+   
+}
+
+
+.form-subscribe {
+    width: 264px;
 }
 .footer-title {
+    display: block;
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
@@ -457,23 +465,32 @@ transition: background-color var(--transition-duration-function);
 }
 
 .footer-mail-input {
-    display: flex;
+    
 
 }
+.form-foter {
+    display: flex;
+    align-items: flex-end;
+    
+}
 .footer-input {
+    height: 40px;
+    width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    color: var(--white-color);
     background-color: var(--dark-color);
 }
 .footer-btn {
     display: flex;
     align-items: center;
     gap: 16px;
+    height: 40px;
     padding: 8px 24px;
-    
+    margin-left: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -482,6 +499,7 @@ transition: background-color var(--transition-duration-function);
     border: transparent;
     color: var(--white-color);
     background-color: var(--primary-brand-color);
+    cursor: pointer;
 }
 
 
@@ -627,5 +645,132 @@ transition: background-color var(--transition-duration-function);
 }
 
 
+.form-field {
+position: relative;
+}
+.form-field:not(:last-child) {
+    margin-bottom: 8px;
+}
+.form-title {
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+}
 
+.form-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33; 
+    letter-spacing: 0.04em;
+    color: #8E8F99 ; 
+}
+.form-input {
+    width: 100%;
+    padding-top: 8px;
+    padding-left: 38px;
+    padding-bottom: 8px;
+    font: inherit;
+    border:  1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;  
+    transition: fill var(--transition-duration-function);
+}
+.form-input:focus {
+ border-color: 1px solid var(--primary-brand-color);
+ 
+}
+.form-input:focus + .modal-icon {
+   
+   
+}
 
+.form-field:focus-within > .modal-icon {
+fill: var(--primary-brand-color);
+}
+.modal-icon {
+    position: absolute;
+    top: 29px;
+    left: 16px;
+}
+
+.form-textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+}
+
+.form-check {
+    display: inline-flex;
+    align-items: center;
+}
+.form-check-label {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #757575;
+}
+.form-check-label::before {
+    content: "";
+    display: inline-block; 
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    background-position: center;
+    background-size: 10*8;
+    background-repeat: no-repeat;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.form-check-input:checked + .form-check-label::before {
+   background-origin: border-box;
+   border-color: var(--pressed-state-color);
+   background-color: var(--pressed-state-color);
+    background-image: url(../images/click.svg);
+}
+
+/* .form-check-label::before:focus {
+    background-color: var(--pressed-state-color);
+        background-image: url(../images/click.svg);
+} */
+.form-link {
+    color: var(--primary-brand-color);
+}
+
+.btn-send {
+    display: block;
+    width: 169px;
+    height: 56px;
+    margin: 0 auto;
+
+   
+    padding: 16px 32px;
+    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--white-color);
+    background-color: var(--primary-brand-color);
+    cursor: pointer;
+}
